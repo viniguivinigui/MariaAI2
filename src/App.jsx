@@ -31,7 +31,7 @@ const markup = `
 </nav>
 <section class="z-10 w-full relative overflow-hidden">
   <div class="absolute inset-0 -z-10">
-    <img src="/fundo-hero.png" alt="Fundo hero" class="w-full h-full object-cover opacity-85" />
+    <img src="${import.meta.env.BASE_URL}fundo-hero.png" alt="Fundo hero" class="w-full h-full object-cover opacity-85" />
     <div class="absolute inset-0 bg-white/35"></div>
   </div>
   <div class="pointer-events-none absolute bottom-0 left-0 right-0 h-32 sm:h-40 lg:h-48 bg-gradient-to-b from-transparent via-white/70 to-white"></div>
@@ -55,7 +55,7 @@ const markup = `
       </div>
       <div class="lg:col-span-5 flex flex-col">
         <div class="relative w-full h-[320px] sm:h-[420px] lg:h-[440px] border border-slate-900 overflow-hidden group animate-reveal delay-200 bg-white/80 card-elastic">
-          <img alt="Maria AI" class="group-hover:scale-105 transition-transform duration-1000 ease-out w-full h-full object-cover object-top" src="/gemini_hero.png" />
+          <img alt="Maria AI" class="group-hover:scale-105 transition-transform duration-1000 ease-out w-full h-full object-cover object-top" src="${import.meta.env.BASE_URL}gemini_hero.png" />
         </div>
         <div class="p-6 bg-teal-50/40 backdrop-blur-sm border border-t-0 border-teal-100 shadow-lg shadow-teal-200/20 animate-reveal delay-300 min-h-[160px] text-center card-elastic">
           <div class="flex items-center gap-3 mb-4 justify-center">
@@ -161,7 +161,7 @@ const markup = `
             <iframe
               id="phone-animation-frame"
               title="Animacao de atendimento no celular"
-              src="/phone-chat/index.html"
+              src="${import.meta.env.BASE_URL}phone-chat/index.html"
               class="w-full h-full border-0 bg-transparent"
               loading="lazy"
             ></iframe>
@@ -449,7 +449,7 @@ function App() {
 
     const restartAnimation = () => {
       if (!(animationFrame instanceof HTMLIFrameElement)) return;
-      animationFrame.src = `/phone-chat/index.html?restart=${Date.now()}`;
+      animationFrame.src = `${import.meta.env.BASE_URL}phone-chat/index.html?restart=${Date.now()}`;
       setAnimationProgress(0);
     };
 
