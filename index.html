@@ -70,6 +70,12 @@ transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 opacity: 1;
 transform: translateY(0);
 }
+.card-elastic {
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.card-elastic:hover {
+  transform: scale(1.03) translateY(-10px);
+}
 .delay-100 { animation-delay: 0.1s; transition-delay: 0.1s; }
 .delay-200 { animation-delay: 0.2s; transition-delay: 0.2s; }
 .delay-300 { animation-delay: 0.3s; transition-delay: 0.3s; }
